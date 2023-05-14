@@ -1,0 +1,51 @@
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-top: 0;
+  }
+  
+  p {
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
+  
+  form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  div.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 1em;
+  }
+  
+  img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+  }
+  
+  #prediction {
+    font-size: 1.5em;
+    margin-top: 1em;
+  }

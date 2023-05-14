@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IPL Score Prediction</title>
+        <link rel="stylesheet" href="animate.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>IPL Score Prediction</h1>
+        <p>This page provides predictions for the upcoming Indian Premier League (IPL) matches.</p>
+        <p>The predictions are based on a variety of factors, including the teams' recent form, the players' availability, and the weather conditions.</p>
+        <p>The predictions are updated daily, so be sure to check back often for the latest information.</p>
+        <form action="/predict" method="post">
+            <input type="text" name="team1" placeholder="Team 1">
+            <input type="text" name="team2" placeholder="Team 2">
+            <input type="submit" value="Predict">
+        </form>
+        <div id="prediction"></div>
+        <div class="images">
+            <img src="C:\Users\admin\Desktop\MACHINE LEARNING\ipl-schedule.webp" alt="IPL">
+            <img src="C:\Users\admin\Desktop\MACHINE LEARNING\mi.jpg" alt="Mumbai Indians">
+            <img src="C:\Users\admin\Desktop\MACHINE LEARNING\csk.jpg" alt="Chennai Super Kings">
+            <img src="C:\Users\admin\Desktop\MACHINE LEARNING\kkr.jpg" alt="Kolkata Knight Riders">
+            <img src="C:\Users\admin\Desktop\MACHINE LEARNING\rcb.jpg" alt="Royal Challengers Bangalore">
+            <img src="C:\Users\admin\Desktop\MACHINE LEARNING\srh.jpg" alt="Sunrisers Hyderabad">
+            <img src="C:\Users\admin\Desktop\MACHINE LEARNING\dc.jpg" alt="Delhi Capitals">
+            <img src="C:\Users\admin\Desktop\MACHINE LEARNING\punjab.jpg" alt="Punjab Kings">
+            <img src="C:\Users\admin\Desktop\MACHINE LEARNING\rr.webp" alt="Rajasthan Royals">
+        </div>
+        <script>
+        function predict() {
+            var team1 = document.getElementById("team1").value;
+            var team2 = document.getElementById("team2").value;
+            var url = "/predict?team1=" + team1 + "&team2=" + team2;
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("prediction").innerHTML = data.prediction;
+            });
+            }
+            </script>
+            </body>
+            </html>
